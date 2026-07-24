@@ -16,6 +16,8 @@ is no router or multilayer switch in this practice lab.
 
 ## Topology
 
+![VLANs and trunking topology](images/topology.png)
+
 Use four Cisco 2960 switches and nine PCs.
 
 ```text
