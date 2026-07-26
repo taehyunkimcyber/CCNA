@@ -13,7 +13,7 @@ switch links.
 ## Lab files
 
 - Packet Tracer activity: save your file as `packet-tracer/lab-01-spanning-tree-basics.pkt`
-- Topology image: optional, save as `images/topology.png`
+- Topology image: [images/topology.png](images/topology.png)
 
 ## Topology
 
