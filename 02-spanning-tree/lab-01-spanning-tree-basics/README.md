@@ -155,7 +155,8 @@ The PC port should be an access port in VLAN 10.
 
 ### Task 5 - Configure trunk links
 
-Configure all switch-to-switch links as trunks. Use VLAN 999 as the native VLAN.
+Configure all switch-to-switch links as trunks. Use VLAN 999 as the native
+VLAN, but exclude this unused black-hole VLAN from the allowed lists.
 
 **SW1**
 
@@ -165,12 +166,12 @@ interface gi0/1
  description TRUNK_TO_SW2
  switchport mode trunk
  switchport trunk native vlan 999
- switchport trunk allowed vlan 10,99,999
+ switchport trunk allowed vlan 10,99
 interface gi0/2
  description TRUNK_TO_SW3
  switchport mode trunk
  switchport trunk native vlan 999
- switchport trunk allowed vlan 10,99,999
+ switchport trunk allowed vlan 10,99
 end
 ```
 
@@ -182,12 +183,12 @@ interface gi0/1
  description TRUNK_TO_SW1
  switchport mode trunk
  switchport trunk native vlan 999
- switchport trunk allowed vlan 10,99,999
+ switchport trunk allowed vlan 10,99
 interface gi0/2
  description TRUNK_TO_SW3
  switchport mode trunk
  switchport trunk native vlan 999
- switchport trunk allowed vlan 10,99,999
+ switchport trunk allowed vlan 10,99
 end
 ```
 
@@ -199,12 +200,12 @@ interface gi0/1
  description TRUNK_TO_SW1
  switchport mode trunk
  switchport trunk native vlan 999
- switchport trunk allowed vlan 10,99,999
+ switchport trunk allowed vlan 10,99
 interface gi0/2
  description TRUNK_TO_SW2
  switchport mode trunk
  switchport trunk native vlan 999
- switchport trunk allowed vlan 10,99,999
+ switchport trunk allowed vlan 10,99
 end
 ```
 
@@ -458,7 +459,8 @@ the problem using show commands before correcting it.
 - PC-facing ports use PortFast and BPDU Guard.
 - Switch-to-switch links are trunks.
 - Trunks use native VLAN 999.
-- Trunks allow only VLANs 10, 99, and 999.
+- Trunks allow only VLANs 10 and 99.
+- VLAN 999 exists and is native, but is excluded from the allowed lists.
 - SW1 is the root bridge for VLAN 10.
 - SW2 is configured as the secondary root bridge for VLAN 10.
 - One redundant trunk path is blocking for VLAN 10.

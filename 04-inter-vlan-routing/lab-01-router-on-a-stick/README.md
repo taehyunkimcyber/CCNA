@@ -69,8 +69,8 @@ that interface name everywhere this lab uses `Gi0/0`.
 | 99 | MANAGEMENT | Switch management |
 | 999 | NATIVE-BLACKHOLE | Unused native VLAN |
 
-VLAN 999 is the native VLAN but has no IP address. User and management traffic
-is tagged on the trunk.
+VLAN 999 is the native VLAN but has no IP address and is excluded from the
+allowed list. User and management traffic is tagged on the trunk.
 
 ## Lab tasks
 
@@ -179,13 +179,14 @@ interface gi0/1
  description TRUNK_TO_R1
  switchport mode trunk
  switchport trunk native vlan 999
- switchport trunk allowed vlan 10,20,99,999
+ switchport trunk allowed vlan 10,20,99
  no shutdown
 end
 show interfaces trunk
 ```
 
-Checkpoint: Gi0/1 should be trunking and forwarding VLANs 10, 20, 99, and 999.
+Checkpoint: Gi0/1 should use native VLAN 999 while allowing and forwarding only
+VLANs 10, 20, and 99.
 
 ### Task 7 - Enable the router physical interface
 
@@ -369,6 +370,7 @@ it with show commands before fixing it.
 - Every PC-facing port is in the correct access VLAN.
 - SW1 Gi0/1 is an 802.1Q trunk carrying only the required VLANs.
 - VLAN 999 is native on both ends of the trunk.
+- VLAN 999 is excluded from the switch trunk's allowed list.
 - R1 Gi0/0 is enabled and has no physical-interface IP address.
 - R1 has correctly tagged subinterfaces for VLANs 10, 20, and 99.
 - Every PC has the correct IP address, mask, and default gateway.

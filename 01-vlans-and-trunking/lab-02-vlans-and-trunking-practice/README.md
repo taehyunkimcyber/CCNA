@@ -234,8 +234,9 @@ Each PC-facing port should appear in the correct VLAN.
 
 ### Task 5 - Configure trunks
 
-Configure the switch-to-switch links as trunks. Use VLAN 999 as the native VLAN.
-Allow only VLANs used in this lab.
+Configure the switch-to-switch links as trunks. Use VLAN 999 as the native
+VLAN. Allow only the user and management VLANs; exclude the unused black-hole
+VLAN 999 from the allowed lists.
 
 **SW1**
 
@@ -245,12 +246,12 @@ interface gi0/1
  description TRUNK_TO_SW2
  switchport mode trunk
  switchport trunk native vlan 999
- switchport trunk allowed vlan 10,20,30,40,99,999
+ switchport trunk allowed vlan 10,20,30,40,99
 interface gi0/2
  description TRUNK_TO_SW3
  switchport mode trunk
  switchport trunk native vlan 999
- switchport trunk allowed vlan 10,20,30,40,99,999
+ switchport trunk allowed vlan 10,20,30,40,99
 end
 ```
 
@@ -262,12 +263,12 @@ interface gi0/1
  description TRUNK_TO_SW1
  switchport mode trunk
  switchport trunk native vlan 999
- switchport trunk allowed vlan 10,20,30,40,99,999
+ switchport trunk allowed vlan 10,20,30,40,99
 interface gi0/2
  description TRUNK_TO_SW4
  switchport mode trunk
  switchport trunk native vlan 999
- switchport trunk allowed vlan 10,20,30,40,99,999
+ switchport trunk allowed vlan 10,20,30,40,99
 end
 ```
 
@@ -279,7 +280,7 @@ interface gi0/1
  description TRUNK_TO_SW1
  switchport mode trunk
  switchport trunk native vlan 999
- switchport trunk allowed vlan 10,20,30,40,99,999
+ switchport trunk allowed vlan 10,20,30,40,99
 end
 ```
 
@@ -291,7 +292,7 @@ interface gi0/1
  description TRUNK_TO_SW2
  switchport mode trunk
  switchport trunk native vlan 999
- switchport trunk allowed vlan 10,20,30,40,99,999
+ switchport trunk allowed vlan 10,20,30,40,99
 end
 ```
 
@@ -301,8 +302,8 @@ Checkpoint:
 show interfaces trunk
 ```
 
-Each trunk should show native VLAN 999 and allowed VLANs
-`10,20,30,40,99,999`.
+Each trunk should show native VLAN 999 and allowed VLANs `10,20,30,40,99`.
+VLAN 999 should not appear in the allowed-and-active or forwarding lists.
 
 ### Task 6 - Verify same-VLAN connectivity
 
@@ -421,6 +422,8 @@ commands before correcting it.
 - All switch-to-switch links are trunks.
 - Native VLAN is 999 on every trunk.
 - Allowed VLAN lists match on both ends of every trunk.
+- Only VLANs 10, 20, 30, 40, and 99 are allowed on the trunks.
+- VLAN 999 is excluded from the allowed lists.
 - Same-VLAN PCs can ping across switches.
 - Different-VLAN PCs cannot ping.
 - Management SVIs can ping across VLAN 99.

@@ -193,8 +193,9 @@ switches will still fail until the trunks are configured.
 
 ### Task 5 — Configure the trunks
 
-Allow only the VLANs used by this lab. Use VLAN 999 as the native VLAN on both
-ends of every trunk.
+Allow only the user and management VLANs used by this lab. Use VLAN 999 as the
+native VLAN on both ends of every trunk, but do not include the unused
+black-hole VLAN in the allowed list.
 
 **SW1**
 
@@ -204,7 +205,7 @@ interface gi0/1
  description TRUNK_TO_SW2
  switchport mode trunk
  switchport trunk native vlan 999
- switchport trunk allowed vlan 10,20,30,99,999
+ switchport trunk allowed vlan 10,20,30,99
 end
 ```
 
@@ -216,12 +217,12 @@ interface gi0/1
  description TRUNK_TO_SW1
  switchport mode trunk
  switchport trunk native vlan 999
- switchport trunk allowed vlan 10,20,30,99,999
+ switchport trunk allowed vlan 10,20,30,99
 interface gi0/2
  description TRUNK_TO_SW3
  switchport mode trunk
  switchport trunk native vlan 999
- switchport trunk allowed vlan 10,20,30,99,999
+ switchport trunk allowed vlan 10,20,30,99
 end
 ```
 
@@ -233,7 +234,7 @@ interface gi0/1
  description TRUNK_TO_SW2
  switchport mode trunk
  switchport trunk native vlan 999
- switchport trunk allowed vlan 10,20,30,99,999
+ switchport trunk allowed vlan 10,20,30,99
 end
 ```
 
@@ -244,7 +245,7 @@ show interfaces trunk
 ```
 
 Confirm that the expected interfaces are trunking, native VLAN 999 is shown,
-and VLANs `10,20,30,99,999` are allowed and forwarding.
+and only VLANs `10,20,30,99` are allowed and forwarding.
 
 > Some switch models accept `switchport trunk encapsulation dot1q`. A 2960 uses
 > 802.1Q only, so that command is not available or required.
@@ -349,7 +350,8 @@ the problem using show commands before correcting it.
 - All VLANs exist with the correct names on all switches.
 - PC-facing ports are static access ports in the correct VLANs.
 - Inter-switch links are trunks with native VLAN 999.
-- Only VLANs 10, 20, 30, 99, and 999 are allowed on the trunks.
+- Only VLANs 10, 20, 30, and 99 are allowed on the trunks.
+- VLAN 999 exists and is native, but is excluded from the allowed lists.
 - Same-VLAN hosts can ping across switches.
 - Different-VLAN hosts cannot ping in this Layer 2-only lab.
 - All three management SVIs can ping one another.

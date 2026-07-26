@@ -156,10 +156,11 @@ interface fa0/2
 end
 ```
 
-### Task 5 - Prepare the EtherChannel members
+### Task 5 - Bundle the physical interfaces with LACP
 
-All member interfaces must have compatible Layer 2 settings. Configure the
-four physical links identically before adding them to the channel.
+Shut down the four links before bundling them. This prevents the parallel
+interfaces from forwarding as separate links while the EtherChannel is being
+built.
 
 Run on both switches:
 
@@ -167,30 +168,42 @@ Run on both switches:
 configure terminal
 interface range fa0/21 - 24
  description LACP_MEMBER_TO_OTHER_SWITCH
- switchport mode trunk
- switchport trunk native vlan 999
- switchport trunk allowed vlan 10,20,999
+ shutdown
+ channel-group 1 mode active
 end
 ```
 
-Do not configure IP addresses on the physical member ports.
+All members must use compatible settings such as speed, duplex, Layer 2 mode,
+and channel protocol. Do not configure IP addresses or trunk VLAN settings on
+the individual members.
 
-### Task 6 - Form Port-Channel 1 with LACP
+Checkpoint:
 
-Use LACP active mode on both switches.
+```ios
+show etherchannel summary
+```
+
+Port-channel 1 should exist and use LACP. It remains down until its physical
+members are enabled in Task 6.
+
+### Task 6 - Configure Port-Channel 1 as a trunk
+
+Apply the trunk configuration to the logical port-channel. IOS uses this
+configuration for the bundled member links. Allow only the user VLANs; keep
+VLAN 999 as the native VLAN but exclude it from the allowed list.
 
 Run on both switches:
 
 ```ios
 configure terminal
-interface range fa0/21 - 24
- channel-group 1 mode active
-exit
 interface port-channel 1
  description LACP_TRUNK_TO_OTHER_SWITCH
  switchport mode trunk
  switchport trunk native vlan 999
- switchport trunk allowed vlan 10,20,999
+ switchport trunk allowed vlan 10,20
+ no shutdown
+exit
+interface range fa0/21 - 24
  no shutdown
 end
 ```
@@ -333,8 +346,8 @@ must be active.
 Introduce one fault at a time after saving the working configuration. Diagnose
 it with show commands before fixing it.
 
-1. Set SW2 Fa0/24 to access mode. Find the suspended or unbundled member with
-   `show etherchannel summary`, then restore matching trunk settings.
+1. Remove SW2 Fa0/24 from channel group 1. Find the unbundled interface with
+   `show etherchannel summary`, then restore its LACP membership.
 2. Remove VLAN 20 from the allowed list on Po1 at one switch. Determine why the
    VLAN 10 ping works while the VLAN 20 ping fails.
 3. Change SW2's member interfaces to LACP passive, leaving SW1 active. Confirm
@@ -348,11 +361,12 @@ it with show commands before fixing it.
 
 - VLANs 10, 20, and 999 exist on both switches.
 - PC-facing ports are in the correct access VLANs.
-- Fa0/21 through Fa0/24 have consistent trunk settings.
+- Fa0/21 through Fa0/24 belong to channel group 1 and use compatible settings.
 - Port-channel 1 uses LACP.
 - `Po1` shows `(SU)` and every active member shows `(P)`.
-- The trunk carries only VLANs 10, 20, and 999.
+- The trunk allows only VLANs 10 and 20.
 - VLAN 999 is the native VLAN on both ends.
+- VLAN 999 is excluded from the allowed lists.
 - Same-VLAN pings succeed across the EtherChannel.
 - Different-VLAN pings fail because no router is present.
 - Connectivity survives the loss of one member link.
