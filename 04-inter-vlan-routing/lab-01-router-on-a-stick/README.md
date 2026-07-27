@@ -13,9 +13,11 @@ carries traffic for multiple VLANs.
 
 - Packet Tracer activity: save as
   `packet-tracer/lab-01-router-on-a-stick.pkt`
-- Topology image: optional, save as `images/topology.png`
+- Topology image: [images/topology.png](images/topology.png)
 
 ## Topology
+
+![Router on a Stick topology](images/topology.png)
 
 Use one Cisco 2911 router, one Cisco 2960 switch, and four PCs.
 
