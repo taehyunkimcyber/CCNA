@@ -33,7 +33,7 @@ Use this layout for topics that contain multiple practice labs:
 | 04 | [Inter-VLAN Routing](04-inter-vlan-routing/README.md) | In progress |
 | 05 | [Static Routing](05-static-routing/README.md) | In progress |
 | 06 | [OSPF](06-ospf/README.md) | Planned |
-| 07 | [ACLs](07-acls/README.md) | Planned |
+| 07 | [ACLs](07-acls/README.md) | In progress |
 | 08 | [NAT and PAT](08-nat-and-pat/README.md) | Planned |
 | 09 | [Layer 2 Security](09-layer2-security/README.md) | Planned |
 | 10 | [Troubleshooting](10-troubleshooting/README.md) | Planned |
