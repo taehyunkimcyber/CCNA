@@ -4,11 +4,13 @@ This folder contains practice labs for router-on-a-stick, 802.1Q router
 subinterfaces, default gateways, switched virtual interfaces, and multilayer
 switching.
 
+Status: complete.
+
 ## Labs
 
-| # | Lab | Packet Tracer file |
-|---:|---|---|
-| 01 | [Router-on-a-Stick](lab-01-router-on-a-stick/README.md) | save as `lab-01-router-on-a-stick/packet-tracer/lab-01-router-on-a-stick.pkt` |
+| # | Lab | Status | Packet Tracer file |
+|---:|---|---|---|
+| 01 | [Router-on-a-Stick](lab-01-router-on-a-stick/README.md) | Complete | `lab-01-router-on-a-stick/packet-tracer/01-router-on-a-stick.pkt` |
 
 ## Suggested order
 

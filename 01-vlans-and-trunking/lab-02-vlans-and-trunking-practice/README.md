@@ -1,5 +1,7 @@
 # Practice Lab 2: VLANs and Trunking
 
+Status: complete.
+
 ## Goal
 
 Build a new Layer 2 network from scratch and practice VLAN creation, access
@@ -11,7 +13,7 @@ is no router or multilayer switch in this practice lab.
 
 ## Lab files
 
-- Packet Tracer activity: save your file as `packet-tracer/practice-02-vlans-and-trunking.pkt`
+- Packet Tracer activity: [packet-tracer/02-vlans-and-trunking.pkt](packet-tracer/02-vlans-and-trunking.pkt)
 - Topology image: [images/topology.png](images/topology.png)
 
 ## Topology
@@ -99,7 +101,7 @@ you need a nudge.
 2. Add nine PCs.
 3. Cable everything according to the cabling table.
 4. Rename the switches `SW1`, `SW2`, `SW3`, and `SW4`.
-5. Save the Packet Tracer file as `practice-02-vlans-and-trunking.pkt`.
+5. Save the Packet Tracer file as `02-vlans-and-trunking.pkt`.
 
 On each switch, using the correct hostname:
 

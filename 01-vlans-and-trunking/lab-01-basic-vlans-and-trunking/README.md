@@ -1,5 +1,7 @@
 # Lab 1: VLANs and 802.1Q Trunking
 
+Status: complete.
+
 ## Goal
 
 Build a small switched network in Packet Tracer and configure VLANs, access

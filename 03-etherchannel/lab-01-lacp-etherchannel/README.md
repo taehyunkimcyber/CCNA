@@ -1,5 +1,7 @@
 # Lab 1: LACP EtherChannel Basics
 
+Status: complete.
+
 ## Goal
 
 Build an EtherChannel between two switches using Link Aggregation Control
@@ -12,8 +14,7 @@ the best default choice when both devices support it.
 
 ## Lab files
 
-- Packet Tracer activity: save as
-  `packet-tracer/lab-01-lacp-etherchannel.pkt`
+- Packet Tracer activity: [packet-tracer/01-etherchannel.pkt](packet-tracer/01-etherchannel.pkt)
 - Topology image: [images/topology.png](images/topology.png)
 
 ## Topology
@@ -80,7 +81,7 @@ reference if you get stuck.
 1. Add two Cisco 2960 switches and four PCs.
 2. Cable the devices according to the cabling table.
 3. Rename the switches `SW1` and `SW2`.
-4. Save the project as `lab-01-lacp-etherchannel.pkt`.
+4. Save the project as `01-etherchannel.pkt`.
 
 On each switch, using the correct hostname:
 

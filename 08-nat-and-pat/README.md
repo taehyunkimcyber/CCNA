@@ -4,12 +4,14 @@ Network Address Translation labs for static NAT, dynamic NAT pools, PAT
 overload, inside/outside interface selection, translation-table verification,
 and common NAT troubleshooting mistakes.
 
+Status: complete.
+
 ## Labs
 
-| # | Lab | Status |
-|---:|---|---|
-| 01 | [Static NAT and PAT](lab-01-static-nat-and-pat/README.md) | Ready |
-| 02 | [Dynamic NAT and PAT](lab-02-dynamic-nat-and-pat/README.md) | Ready |
+| # | Lab | Status | Packet Tracer file |
+|---:|---|---|---|
+| 01 | [Static NAT and PAT](lab-01-static-nat-and-pat/README.md) | Complete | `lab-01-static-nat-and-pat/packet-tracer/lab-01-static-nat-and-pat.pkt` |
+| 02 | [Dynamic NAT and PAT](lab-02-dynamic-nat-and-pat/README.md) | Complete | `lab-02-dynamic-nat-and-pat/packet-tracer/lab-02-dynamic-nat-and-pat.pkt` |
 
 ## Notes
 

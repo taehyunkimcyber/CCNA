@@ -1,5 +1,7 @@
 # Lab 1: IPv4 Static and Default Routes
 
+Status: complete.
+
 ## Goal
 
 Build a three-router network and manually provide reachability between three
@@ -11,9 +13,8 @@ No dynamic routing protocol is used in this lab.
 
 ## Lab files
 
-- Packet Tracer activity: build and save as
-  `packet-tracer/lab-01-ipv4-static-and-default-routes.pkt`
-  - Topology image: [images/topology.png](images/topology.png)
+- Packet Tracer activity: [packet-tracer/01-static-routing.pkt](packet-tracer/01-static-routing.pkt)
+- Topology image: [images/topology.png](images/topology.png)
 
 ## Topology
 
@@ -106,7 +107,7 @@ reference if you get stuck.
 1. Add three 2911 routers, three 2960 switches, and six PCs.
 2. Cable the devices according to the cabling table.
 3. Rename the devices `R1`, `R2`, `R3`, `SW1`, `SW2`, and `SW3`.
-4. Save the project as `lab-01-ipv4-static-and-default-routes.pkt`.
+4. Save the project as `01-static-routing.pkt`.
 
 On each router and switch, substitute the correct hostname:
 

@@ -3,11 +3,13 @@
 This folder contains practice labs for Spanning Tree Protocol, root bridge
 election, port roles, blocked ports, PortFast, BPDU Guard, and convergence.
 
+Status: complete.
+
 ## Labs
 
-| # | Lab | Packet Tracer file |
-|---:|---|---|
-| 01 | [Spanning Tree Protocol Basics](lab-01-spanning-tree-basics/README.md) | save as `lab-01-spanning-tree-basics/packet-tracer/lab-01-spanning-tree-basics.pkt` |
+| # | Lab | Status | Packet Tracer file |
+|---:|---|---|---|
+| 01 | [Spanning Tree Protocol Basics](lab-01-spanning-tree-basics/README.md) | Complete | `lab-01-spanning-tree-basics/packet-tracer/01-spanning-tree.pkt` |
 
 ## Suggested Order
 

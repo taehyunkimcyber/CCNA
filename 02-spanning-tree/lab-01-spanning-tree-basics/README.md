@@ -1,5 +1,7 @@
 # Lab 1: Spanning Tree Protocol Basics
 
+Status: complete.
+
 ## Goal
 
 Build a redundant Layer 2 switching topology and use Spanning Tree Protocol
@@ -12,7 +14,7 @@ switch links.
 
 ## Lab files
 
-- Packet Tracer activity: save your file as `packet-tracer/lab-01-spanning-tree-basics.pkt`
+- Packet Tracer activity: [packet-tracer/01-spanning-tree.pkt](packet-tracer/01-spanning-tree.pkt)
 - Topology image: [images/topology.png](images/topology.png)
 
 ## Topology
@@ -87,7 +89,7 @@ are a reference if you get stuck.
 2. Add three PCs.
 3. Cable the devices according to the topology.
 4. Rename the switches `SW1`, `SW2`, and `SW3`.
-5. Save the Packet Tracer project as `lab-01-spanning-tree-basics.pkt`.
+5. Save the Packet Tracer project as `01-spanning-tree.pkt`.
 
 On each switch, using the correct hostname:
 

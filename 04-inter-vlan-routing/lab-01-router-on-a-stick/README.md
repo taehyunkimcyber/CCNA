@@ -1,5 +1,7 @@
 # Lab 1: Router-on-a-Stick
 
+Status: complete.
+
 ## Goal
 
 Configure inter-VLAN routing with one router interface, an 802.1Q trunk, and
@@ -11,8 +13,7 @@ carries traffic for multiple VLANs.
 
 ## Lab files
 
-- Packet Tracer activity: save as
-  `packet-tracer/lab-01-router-on-a-stick.pkt`
+- Packet Tracer activity: [packet-tracer/01-router-on-a-stick.pkt](packet-tracer/01-router-on-a-stick.pkt)
 - Topology image: [images/topology.png](images/topology.png)
 
 ## Topology
@@ -84,7 +85,7 @@ reference if you get stuck.
 1. Add one 2911 router, one 2960 switch, and four PCs.
 2. Cable the devices according to the cabling table.
 3. Rename the router `R1` and the switch `SW1`.
-4. Save the project as `lab-01-router-on-a-stick.pkt`.
+4. Save the project as `01-router-on-a-stick.pkt`.
 
 On R1:
 

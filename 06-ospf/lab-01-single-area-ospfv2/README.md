@@ -1,5 +1,7 @@
 # Lab 1: Single-Area OSPFv2
 
+Status: complete.
+
 ## Goal
 
 Build a three-router IPv4 network and use single-area OSPFv2 to provide
@@ -11,8 +13,7 @@ All routers are in OSPF area 0.
 
 ## Lab files
 
-- Packet Tracer activity: save as
-  `packet-tracer/lab-01-single-area-ospfv2.pkt`
+- Packet Tracer activity: [packet-tracer/01-single-area-ospfv2.pkt](packet-tracer/01-single-area-ospfv2.pkt)
 - Topology image: [images/topology.png](images/topology.png)
 
 ## Topology
@@ -104,7 +105,7 @@ reference if you get stuck.
 1. Add three 2911 routers, three 2960 switches, and six PCs.
 2. Cable the devices according to the cabling table.
 3. Rename the devices `R1`, `R2`, `R3`, `SW1`, `SW2`, and `SW3`.
-4. Save the project as `lab-01-single-area-ospfv2.pkt`.
+4. Save the project as `01-single-area-ospfv2.pkt`.
 
 On each router and switch, substitute the correct hostname:
 

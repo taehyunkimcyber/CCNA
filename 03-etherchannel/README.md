@@ -3,11 +3,13 @@
 This folder contains practice labs for link aggregation, LACP, EtherChannel
 verification, configuration consistency, and link-failure testing.
 
+Status: complete.
+
 ## Labs
 
-| # | Lab | Packet Tracer file |
-|---:|---|---|
-| 01 | [LACP EtherChannel Basics](lab-01-lacp-etherchannel/README.md) | save as `lab-01-lacp-etherchannel/packet-tracer/lab-01-lacp-etherchannel.pkt` |
+| # | Lab | Status | Packet Tracer file |
+|---:|---|---|---|
+| 01 | [LACP EtherChannel Basics](lab-01-lacp-etherchannel/README.md) | Complete | `lab-01-lacp-etherchannel/packet-tracer/01-etherchannel.pkt` |
 
 ## Suggested order
 

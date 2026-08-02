@@ -4,11 +4,13 @@ This folder contains practice labs for IPv4 static routes, default routes,
 routing-table interpretation, route selection, and static-route
 troubleshooting.
 
+Status: complete.
+
 ## Labs
 
-| # | Lab | Packet Tracer file |
-|---:|---|---|
-| 01 | [IPv4 Static and Default Routes](lab-01-ipv4-static-and-default-routes/README.md) | save as `lab-01-ipv4-static-and-default-routes/packet-tracer/lab-01-ipv4-static-and-default-routes.pkt` |
+| # | Lab | Status | Packet Tracer file |
+|---:|---|---|---|
+| 01 | [IPv4 Static and Default Routes](lab-01-ipv4-static-and-default-routes/README.md) | Complete | `lab-01-ipv4-static-and-default-routes/packet-tracer/01-static-routing.pkt` |
 
 ## Suggested order
 

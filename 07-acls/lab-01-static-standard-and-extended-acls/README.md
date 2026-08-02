@@ -1,5 +1,7 @@
 # Lab 1: Static Standard and Extended ACLs
 
+Status: complete.
+
 ## Goal
 
 Build a three-router network and apply static IPv4 ACLs to control traffic
@@ -12,8 +14,7 @@ you can focus on ACL behavior.
 
 ## Lab files
 
-- Packet Tracer activity: build and save as
-  `packet-tracer/lab-01-static-standard-and-extended-acls.pkt`
+- Packet Tracer activity: [packet-tracer/01-static-acl.pkt](packet-tracer/01-static-acl.pkt)
 - Topology image: [images/topology.png](images/topology.png)
 
 ## Topology
@@ -106,7 +107,7 @@ reference if you get stuck.
 1. Add three 2911 routers, three 2960 switches, and six PCs.
 2. Cable the devices according to the cabling table.
 3. Rename the devices `R1`, `R2`, `R3`, `SW1`, `SW2`, and `SW3`.
-4. Save the project as `lab-01-static-standard-and-extended-acls.pkt`.
+4. Save the project as `01-static-acl.pkt`.
 
 On each router and switch, substitute the correct hostname:
 

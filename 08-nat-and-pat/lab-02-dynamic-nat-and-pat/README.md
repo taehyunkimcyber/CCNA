@@ -1,5 +1,7 @@
 # Lab 2: Dynamic NAT and PAT
 
+Status: complete.
+
 ## Goal
 
 Build a small inside/outside network and configure two dynamic IPv4 NAT
@@ -18,8 +20,7 @@ overload. It does not use NAT Virtual Interface, policy NAT, or twice NAT.
 
 ## Lab files
 
-- Packet Tracer activity: build and save as
-  `packet-tracer/lab-02-dynamic-nat-and-pat.pkt`
+- Packet Tracer activity: [packet-tracer/lab-02-dynamic-nat-and-pat.pkt](packet-tracer/lab-02-dynamic-nat-and-pat.pkt)
 - Topology image: [images/topology.png](images/topology.png)
 
 ## Topology

@@ -1,5 +1,7 @@
 # Lab 2: Extended ACLs for Services
 
+Status: complete.
+
 ## Goal
 
 Build a small inside/outside network and use a named extended IPv4 ACL to
@@ -12,8 +14,7 @@ dynamic ACLs, or stateful firewall features.
 
 ## Lab files
 
-- Packet Tracer activity: build and save as
-  `packet-tracer/lab-02-extended-acl-services.pkt`
+- Packet Tracer activity: [packet-tracer/lab-02-extended-acl-services.pkt](packet-tracer/lab-02-extended-acl-services.pkt)
 - Topology image: [images/topology.png](images/topology.png)
 
 ## Topology

@@ -1,5 +1,7 @@
 # Lab 1: Static NAT and PAT
 
+Status: complete.
+
 ## Goal
 
 Build a small inside/outside network and configure two common IPv4 NAT
@@ -17,8 +19,7 @@ overload. A later practice lab can add dynamic NAT with a pool.
 
 ## Lab files
 
-- Packet Tracer activity: build and save as
-  `packet-tracer/lab-01-static-nat-and-pat.pkt`
+- Packet Tracer activity: [packet-tracer/lab-01-static-nat-and-pat.pkt](packet-tracer/lab-01-static-nat-and-pat.pkt)
 - Topology image: [images/topology.png](images/topology.png)
 
 ## Topology
